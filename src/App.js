@@ -1,32 +1,20 @@
-
-
 import React from 'react'
-import Admin from './components/Admin'
-import Login from './components/Login'
-import Logout from './components/Logout'
-// import Authentication from './helpers/authentication'
-import {BrowserRouter as   Router, Route, Switch } from "react-router-dom";
-// const PrivateRoute = ({component:component,...rest})=>{
-//     <Route
-//          {...rest} render={(props)=>(
-//             Authentication('/Admin/') === true 
-//              ? <Component {...props}/> : <Redirect to='/singin'/>
-//          )}
-//     />
-// }
-class App extends React.Component {
-
-    render() {
-        return (
-            <Router> <Switch>
-                <Route exact path="/" component={Login} />
-                <Route path="/admin" component={Admin} />
-                <Route path="/logout" component={Logout} />
-            </Switch></Router>
-            
-         
-             
-
+import { BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Login from './component/Login'
+import Logout from './component/Logout'
+import Admin from './component/Admin'
+class App extends React.Component{
+    render(){
+        return(
+           <Router>
+               <Switch>
+                   <Route exact path="/" component={Login}/>
+                   <Route   path="/logout" component={Logout}/>
+                   <Route   path="/admin" component={Admin}/>
+               </Switch>
+           </Router>
+           
+           
         )
     }
 }
