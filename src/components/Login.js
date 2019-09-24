@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Redirect, Route} from "react-router-dom";
+import {Router, Redirect, Route} from "react-router-dom";
 class Login extends React.Component{
     constructor(props){
         super(props)
@@ -7,7 +7,6 @@ class Login extends React.Component{
         if(token==null){
               loggedIn= false
         }
-        
         this.state ={
             email:'',
             password:'',
@@ -48,9 +47,9 @@ class Login extends React.Component{
         }
     }
       render(){
-          if(this.state.loggedIn){
-              return <Redirect to="/admin"/>
-          }
+        //   if(this.state.loggedIn){
+        //       return <Redirect to="/admin"/>
+        //   }
           return(
               <div>
                    <h1>lognin</h1>
